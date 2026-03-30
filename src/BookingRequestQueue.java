@@ -6,43 +6,46 @@ import java.util.Queue;
  * CLASS – BookingRequestQueue
  * ============================================================
  *
- * Use Case 5: Booking Request (FIFO)
+ * Use Case 6: Reservation Confirmation & Room Allocation
  *
  * Description:
- * This class manages booking requests
- * using a queue to ensure fair allocation.
+ * This class manages booking requests in FIFO order.
+ * Requests are processed in the order they are received.
  *
- * Requests are processed strictly
- * in the order they are received.
- *
- * @version 5.0
+ * @author Developer
+ * @version 6.0
  */
 public class BookingRequestQueue {
 
-    private Queue<Reservation> requestQueue = new LinkedList<>();
+    private Queue<Reservation> requestQueue;
 
     /**
-     * Adds a booking request to the queue.
+     * Initializes the booking request queue.
+     */
+    public BookingRequestQueue() {
+        requestQueue = new LinkedList<>();
+    }
+
+    /**
+     * Adds a reservation request to the queue.
      *
-     * @param reservation booking request
+     * @param reservation reservation request
      */
     public void addRequest(Reservation reservation) {
         requestQueue.offer(reservation);
     }
 
     /**
-     * Retrieves and removes the next
-     * booking request from the queue.
+     * Removes and returns the next reservation request.
      *
-     * @return next reservation request
+     * @return next reservation
      */
     public Reservation getNextRequest() {
         return requestQueue.poll();
     }
 
     /**
-     * Checks whether there are
-     * pending booking requests.
+     * Checks if there are pending requests.
      *
      * @return true if queue is not empty
      */
