@@ -3,27 +3,22 @@
  * CLASS – Reservation
  * ============================================================
  *
- * Use Case 5: Booking Request (FIFO)
+ * Use Case 6: Reservation Confirmation & Room Allocation
  *
  * Description:
- * This class represents a booking request
- * made by a guest.
+ * This class represents a booking request made by a guest.
+ * It stores the guest name and requested room type.
  *
- * At this stage, a reservation only captures
- * intent, not confirmation or room allocation.
- *
- * @version 5.0
+ * @author Developer
+ * @version 6.0
  */
 public class Reservation {
 
-    /** Name of the guest making the booking. */
     private String guestName;
-
-    /** Requested room type. */
     private String roomType;
 
     /**
-     * Creates a new booking request.
+     * Creates a new reservation request.
      *
      * @param guestName name of the guest
      * @param roomType requested room type
