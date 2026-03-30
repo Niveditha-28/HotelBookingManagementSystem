@@ -9,7 +9,7 @@ import java.util.Map;
  * Description:
  * Manages room availability using a centralized HashMap.
  *
- * @version 9.0
+ * @version 10.0
  */
 public class RoomInventory {
 
@@ -39,5 +39,10 @@ public class RoomInventory {
         if (current > 0) {
             availability.put(roomType, current - 1);
         }
+    }
+
+    public void incrementAvailability(String roomType) {
+        int current = getAvailability(roomType);
+        availability.put(roomType, current + 1);
     }
 }
