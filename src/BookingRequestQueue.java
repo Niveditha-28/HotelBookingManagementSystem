@@ -7,9 +7,9 @@ import java.util.Queue;
  * ============================================================
  *
  * Description:
- * Manages booking requests using FIFO ordering.
+ * Stores booking requests in FIFO order.
  *
- * @version 9.0
+ * @version 11.0
  */
 public class BookingRequestQueue {
 
