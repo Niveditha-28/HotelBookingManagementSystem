@@ -6,7 +6,7 @@
  * Description:
  * Represents a booking request.
  *
- * @version 9.0
+ * @version 11.0
  */
 public class Reservation {
 
